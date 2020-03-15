@@ -1,8 +1,7 @@
 import urllib.request
 d=dict()
-lst=list()
 c=0
-fhand=urllib.request.urlopen('http://r-statistics.co/Linear-Regression.html')
+fhand=urllib.request.urlopen('http://data.pr4e.org/romeo-full.txt')
 for lines in fhand:
     words=lines.decode().split()
     for word in words:
@@ -11,6 +10,6 @@ for lines in fhand:
             c=c+1
         else:d[word]+=1
 
-print("Total count of words in the url is ",c)
+print("Total count of unique words in the url is ",c)
 
 
